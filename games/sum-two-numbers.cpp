@@ -1,7 +1,10 @@
+// Simple Game of Adding Two Numbers Together In C++
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-int main() {
+int main()
+{
     bool again = true;
     int x = 0, y = 0;
 
@@ -21,7 +24,8 @@ int main() {
         cin >> choice;
 
         transform(choice.begin(), choice.end(), choice.begin(), ::toupper);
-        if (choice == "N" || choice == "NO") {
+        if (choice == "N" || choice == "NO")
+        {
             again = false;
         }
     } while (again == true);

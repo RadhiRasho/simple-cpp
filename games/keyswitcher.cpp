@@ -1,4 +1,4 @@
-/** ONLY WORKS ON WINDOWS
+/** ONLY WORKS ON WINDOWS Machines
  * switches the [SPACE] key to the literal string "[SPACE]"
  * small prank on coworkers
  *
