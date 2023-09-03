@@ -552,7 +552,7 @@ public:
     void setName(string animalName) { name = animalName; }
 
     // prototypes (declarations)
-    void setAll(int, int, string);
+    // void setAll(int, int, string);
 
     // constructors (initializers)
     Animal(int, int, string);
@@ -570,6 +570,85 @@ public:
     void toString();
 };
 
+int Animal::numOfAnimals = 0;
+
+Animal::Animal(int height, int weight, string name)
+{
+    this->height = height;
+    this->weight = weight;
+    this->name = name;
+    Animal::numOfAnimals++;
+}
+
+Animal::~Animal()
+{
+    cout << "Animal " << this->name << " Destroyed" << endl;
+}
+
+Animal::Animal()
+{
+    Animal::numOfAnimals++;
+}
+
+void Animal::toString()
+{
+    cout << this->name << " is " << this->height << " cms tall and " << this->weight << " kgs in weight" << endl;
+}
+
+class Dog : public Animal
+{
+private:
+    string sound = "woof";
+
+public:
+    void getSound()
+    {
+        cout << sound << endl;
+    }
+
+    Dog(int, int, string, string);
+
+    Dog() : Animal(){};
+
+    void toString();
+};
+
+Dog::Dog(int height, int weight, string name, string bark) : Animal(height, weight, name)
+{
+    this->sound = bark;
+}
+
+void Dog::toString()
+{
+    cout << this->getName() << " is " << this->getHeight() << " cms tall and " << this->getWeight() << " kgs in weight and says " << this->sound << endl;
+}
+
+void classes()
+{
+    Animal fred;
+
+    fred.setHeight(33);
+    fred.setWeight(10);
+    fred.setName("Fred");
+
+    cout << fred.getName() << " is " << fred.getHeight() << " cms tall and " << fred.getWeight() << " kgs in weight" << endl;
+
+    Animal tom(36, 15, "Tom");
+
+    cout << tom.getName() << " is " << tom.getHeight() << " cms tall and " << tom.getWeight() << " kgs in weight" << endl;
+
+    Dog spot(38, 16, "Spot", "Woof");
+
+    cout << "Number of Animals: " << Animal::getNumOfAnimals() << endl;
+
+    spot.getSound();
+
+    tom.toString();
+    spot.toString();
+
+    spot.Animal::toString();
+}
+
 #pragma endregion
 
 int main()
@@ -585,6 +664,7 @@ int main()
     // file_io();
     // exception_handling();
     // pointers();
+    classes();
 
     return 0;
 }
