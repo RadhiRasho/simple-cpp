@@ -20,13 +20,14 @@
 #include <vector>
 #include <fstream>
 #include <limits>
+#include <math.h>
 
 using namespace std;
 
 #pragma region Basics Of C++
 void variables()
 {
-    const double PI = 3.1415926535;
+    const int64_t PI = M_PI;
     char myGrade = 'A';
     bool isHappy = true;
     int myAge = 39;
@@ -68,7 +69,7 @@ void variables()
 
     // You can cast variables by placing the data type in parenthesis before the value
     cout << "4 / 5 = " << 4 / 5 << endl;
-    cout << "4 / 5 = " << (float)4 / 5 << endl;
+    cout << "4 / 5 = " << float(4 / 5) << endl;
 
     // If you try to store a value outside the range of the data type it will overflow
     // and you won't end up with the number you thought you would
@@ -664,7 +665,7 @@ int main()
     // file_io();
     // exception_handling();
     // pointers();
-    classes();
+    // classes();
 
     return 0;
 }
