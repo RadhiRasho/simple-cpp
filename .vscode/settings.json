@@ -1,17 +1,4 @@
 {
-	"files.associations": {
-		"iostream": "cpp",
-		"limits": "cpp",
-		"ostream": "cpp",
-		"random": "cpp",
-		"ranges": "cpp",
-		"algorithm": "cpp",
-		"typeinfo": "cpp",
-		"qapplication": "cpp",
-		"qvboxlayout": "cpp",
-		"qkeyevent": "cpp",
-		"qwidget": "cpp"
-	},
 	"[cpp]": {
 		"editor.defaultFormatter": "ms-vscode.cpptools"
 	},
