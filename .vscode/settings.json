@@ -6,7 +6,11 @@
 		"random": "cpp",
 		"ranges": "cpp",
 		"algorithm": "cpp",
-		"typeinfo": "cpp"
+		"typeinfo": "cpp",
+		"qapplication": "cpp",
+		"qvboxlayout": "cpp",
+		"qkeyevent": "cpp",
+		"qwidget": "cpp"
 	},
 	"[cpp]": {
 		"editor.defaultFormatter": "ms-vscode.cpptools"
